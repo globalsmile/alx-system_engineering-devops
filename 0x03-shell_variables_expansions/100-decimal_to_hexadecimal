@@ -1,2 +1,2 @@
-#!/bib/bash
+#!/bin/bash
 printf '%x\n' $DECIMAL
