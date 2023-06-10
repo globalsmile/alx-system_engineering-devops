@@ -1,0 +1,10 @@
+12-newest_files.txt
+11-directories.txt
+10-no_more_js.txt
+ls_cwd_content.txt
+7-file.txt
+\*\\'"Best School"\'\\*$\?\*\*\*\*\*:)
+6-third_line.txt
+5-firstlines.txt
+4-lastlines.txt
+3-twofiles.txt
