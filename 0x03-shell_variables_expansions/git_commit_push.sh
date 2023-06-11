@@ -6,7 +6,7 @@
 repository_path=$(git rev-parse --show-toplevel)
 
 # Set the branch name
-branch="main"
+branch="master"
 
 # Read the commit message from user input
 read -p "Enter the commit message: " commit_message
