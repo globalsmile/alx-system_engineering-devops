@@ -26,15 +26,16 @@ git_push() {
     # Commit changes with the specified message
     git commit -m "$commit_message"
 
-    # Push changes to the remote repository using the pre-saved username and password (token)
-    git push origin "$branch" <<EOF
-$username
-$password
-EOF
+    # Configure Git to use the pre-saved username and password (token)
+    git config credential.helper store <<<"https://$username:$password"
+
+    # Push changes to the remote repository
+    git push origin "$branch"
 }
 
 # Main script execution
 read_commit_message
 git_push
+
 
 
