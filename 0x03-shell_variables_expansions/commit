@@ -1,25 +1,40 @@
 #!/bin/bash
 
-# Script to automate Git add, commit, and push
+# Set the username and password (token)
+username="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"
+password="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"
 
-# Get the current working directory
-repository_path=$(git rev-parse --show-toplevel)
+# Function to read user input for commit message
+read_commit_message() {
+    read -p "Enter the commit message: " commit_message
+}
 
-# Set the branch name
-branch="master"
+# Function to perform Git push
+git_push() {
+    # Get the current working directory
+    repository_path=$(git rev-parse --show-toplevel)
 
-# Read the commit message from user input
-read -p "Enter the commit message: " commit_message
+    # Set the branch name
+    branch="master"
 
-# Change to the repository directory
-cd "$repository_path"
+    # Change to the repository directory
+    cd "$repository_path"
 
-# Add all modified and new files
-git add -A
+    # Add all modified and new files
+    git add -A
 
-# Commit changes with the specified message
-git commit -m "$commit_message"
+    # Commit changes with the specified message
+    git commit -m "$commit_message"
 
-# Push changes to the remote repository
-git push origin "$branch"
+    # Push changes to the remote repository using the pre-saved username and password (token)
+    git push origin "$branch" <<EOF
+$username
+$password
+EOF
+}
+
+# Main script execution
+read_commit_message
+git_push
+
 
