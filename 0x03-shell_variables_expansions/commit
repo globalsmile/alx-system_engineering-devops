@@ -1,25 +1,24 @@
 #!/bin/bash
 
-# Script to automate Git add, commit, and push
+# Load the GitHub token from a file
+TOKEN_FILE="/root/token/token_file.txt"
+GITHUB_TOKEN=$(cat "$TOKEN_FILE")
 
-# Get the current working directory
-repository_path=$(git rev-parse --show-toplevel)
+# Set the repository path
+REPO_PATH=$(git rev-parse --show-toplevel)
 
-# Set the branch name
-branch="master"
+# Extract the repository name from the path
+REPO_NAME=$(basename "$REPO_PATH")
 
-# Read the commit message from user input
-read -p "Enter the commit message: " commit_message
+# Set the commit message and branch
+read -p "Enter the commit message: " COMMIT_MESSAGE
+BRANCH="master"
 
-# Change to the repository directory
-cd "$repository_path"
+# Add and commit changes
+git -C "$REPO_PATH" add .
+git -C "$REPO_PATH" commit -m "$COMMIT_MESSAGE"
 
-# Add all modified and new files
-git add -A
-
-# Commit changes with the specified message
-git commit -m "$commit_message"
-
-# Push changes to the remote repository
-git push origin "$branch"
+# Push to GitHub using the token
+GIT_URL="https://$GITHUB_TOKEN:x-oauth-basic@github.com/globalsmile/$REPO_NAME.git"
+git -C "$REPO_PATH" push "$GIT_URL" "$BRANCH"
 
