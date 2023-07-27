@@ -16,25 +16,25 @@
 
 **0. Create a SSH RSA key pair**
 
-**1. For Holberton School loop**
+**1. For Best School loop**
 
-     Write a Bash script that displays Holberton School 10 times.
+     Write a Bash script that displays Best School 10 times.
 
 Requirement:
 
 * You must use the for loop (while and until are forbidden)
 
-**2. While Holberton School loop**
+**2. While Best School loop**
 
-     Write a Bash script that displays Holberton School 10 times.
+     Write a Bash script that displays Best School 10 times.
 
 Requirements:
 
 * You must use the while loop (for and until are forbidden)
 
-**3. Until Holberton School loop**
+**3. Until Best School loop**
 
-     Write a Bash script that displays Holberton School 10 times.
+     Write a Bash script that displays Best School 10 times.
 
 Requirements:
 
@@ -42,8 +42,8 @@ Requirements:
 
 **4. If 9, say Hi!**
 
-     Write a Bash script that displays Holberton School 10 times, but for the
-     9th iteration, displays Holberton School and then Hi on a new line.
+     Write a Bash script that displays Best School 10 times, but for the
+     9th iteration, displays Best School and then Hi on a new line.
 
 Requirements:
 
@@ -56,7 +56,7 @@ Requirements:
 
 * displays bad luck for the 4th loop iteration
 * displays good luck for the 8th loop iteration
-* displays Holberton School for the other iterations
+* displays Best School for the other iterations
 Requirements:
 
 * You must use the while loop (for and until are forbidden)
@@ -101,18 +101,18 @@ Requirements:
 
 **9. To file, or not to file**
 
-     Write a Bash script that gives you information about the holbertonschool file.
+     Write a Bash script that gives you information about the school file.
 
 Requirements:
 
 * You must use if and, else (case is forbidden)
 * Your Bash script should check if the file exists and print:
-  * if the file exists: holbertonschool file exists
-  * if the file does not exist: holbertonschool file does not exist
+  * if the file exists: school file exists
+  * if the file does not exist: school file does not exist
 * If the file exists, print:
-  * if the file is empty: holbertonschool file is empty
-  * if the file is no empty: holbertonschool file is not empty
-  * if the file is a regular file: holbertonschool is a regular file
+  * if the file is empty: school file is empty
+  * if the file is no empty: school file is not empty
+  * if the file is a regular file: school is a regular file
   * if the file is not a regular file: (nothing)
 
 **10. FizzBuzz**
