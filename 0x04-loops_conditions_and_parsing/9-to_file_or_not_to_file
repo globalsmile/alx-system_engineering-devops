@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #checking file exists and stuff
 
-name=holbertonschool
+name=school
 if [ -e $name ]; then
     echo "school file exists"
 else
