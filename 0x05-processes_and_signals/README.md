@@ -58,20 +58,20 @@ Requirements:
 * In between each iteration of the loop, add a sleep 2
 
 
-**5. Kill me now**
+**5. Don't stop me now!**
 
-     We killed our 4-to_infinity_and_beyond process using ctrl+c in the previous
+     We stopped our 4-to_infinity_and_beyond process using ctrl+c in the previous
      task, there is actually another way to do this.
 
-     Write a Bash script that kills 4-to_infinity_and_beyond process.
+     Write a Bash script that stops 4-to_infinity_and_beyond process.
 
 Requirements:
 
 * You must use kill
 
-**6. Kill me now made easy**
+**6. Stop me if you can**
 
-     Write a Bash script that kills 4-to_infinity_and_beyond process.
+     Write a Bash script that stops 4-to_infinity_and_beyond process.
 
 Requirements:
 
