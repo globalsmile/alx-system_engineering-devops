@@ -74,4 +74,4 @@ Requirement:
 
 Requirement:
 
-* The regular expression must be only matching: capital letters
+*  The regular expression must be only matching: capital letters
