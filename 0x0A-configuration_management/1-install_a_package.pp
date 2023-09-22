@@ -1,20 +1,15 @@
 # Install a package using Puppet
 
-exec { 'install ruby':
-  command => '/usr/bin/apt-get install -y ruby'
+package { 'python3-pip':
+  ensure => installed,
 }
 
-exec { 'install puppet-lint':
-  command => '/usr/bin/gem install puppet-lint -v 2.1.1'
+package { 'python3-venv':
+  ensure => installed,
 }
 
-package { 'ruby':
-  ensure => 'installed',
-  before => Exec['install ruby']
-}
-
-package { 'puppet-lint':
-  ensure  => 'installed',
-  before  => Exec['install puppet-lint'],
-  require => Package['ruby']
+exec { 'install flask':
+  command => '/usr/bin/pip3 install Flask==2.1.0',
+  path    => '/usr/local/bin:/usr/bin',
+  require => [Package['python3-venv'], Package['python3-pip']
 }
