@@ -11,6 +11,6 @@ sudo apt-get -y install nginx
 ufw allow 'Nginx HTTP'
 service nginx start
 echo "Hello World!" > /var/www/html/index.html
-sed -i 's/80/g' /etc/nginx/sites-enabled/default
+sudo sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
 service nginx reload
 
