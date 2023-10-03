@@ -3,7 +3,7 @@
 #
 # Also, when querying nginx at its root / with a GET
 # request, it returns a page that contains the string
-# 'Holberton School'.
+# 'Hello World!'.
 #
 # Also, the script, configure a directive of the Nginx server
 # to redirect to another page with 301 HTTP Code
