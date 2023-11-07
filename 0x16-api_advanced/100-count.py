@@ -1,5 +1,14 @@
 #!/usr/bin/python3
-# get subs
+"""Queries the Reddit API and
+returns a list containing the
+titles of all hot articles for
+a given subreddit.
+
+If no results are found for the
+given subreddit, the function
+should return None.
+"""
+
 from requests import get
 from sys import argv
 
@@ -8,6 +17,8 @@ after = None
 
 
 def count_all(hotlist, word_list):
+    """Returns a list containing the titles of all
+        hot articles for a given subreddit."""
     count_dic = {word.lower(): 0 for word in word_list}
     for title in hotlist:
         words = title.split(' ')
@@ -26,7 +37,7 @@ def count_words(subreddit, word_list):
     global hotlist
     global after
     """subs"""
-    head = {'User-Agent': 'Dan Kazam'}
+    head = {'User-Agent': 'global smile'}
     if after:
         count = get('https://www.reddit.com/r/{}/hot.json?after={}'.format(
             subreddit, after), headers=head).json().get('data')
