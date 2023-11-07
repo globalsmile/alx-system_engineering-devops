@@ -17,8 +17,10 @@ after = None
 
 def count_all(hotlist, word_list):
     """
-    Returns a list containing the titles of all
-    hot articles for a given subreddit.
+    Returns a list containing
+    the titles of all
+    hot articles for a
+    given subreddit.
     """
 
     # Set an User-Agent
@@ -41,8 +43,10 @@ def count_words(subreddit, word_list):
     global hotlist
     global after
     """
-    Returns a list containing the titles of all
-    hot articles for a given subreddit.
+    Returns a list containing
+    the titles of all
+    hot articles for a
+    given subreddit.
     """
 
     # Set an User-Agent
