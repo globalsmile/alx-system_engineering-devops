@@ -8,7 +8,6 @@ If no results are found for the
 given subreddit, the function
 should return None.
 """
-
 from requests import get
 from sys import argv
 
@@ -17,8 +16,12 @@ after = None
 
 
 def count_all(hotlist, word_list):
-    """Returns a list containing the titles of all
-        hot articles for a given subreddit."""
+    """
+    Returns a list containing the titles of all
+    hot articles for a given subreddit.
+    """
+
+    # Set an User-Agent
     count_dic = {word.lower(): 0 for word in word_list}
     for title in hotlist:
         words = title.split(' ')
@@ -26,6 +29,7 @@ def count_all(hotlist, word_list):
             if count_dic.get(word) is not None:
                 count_dic[word] += 1
 
+    # Set an User-Agent
     for key in sorted(count_dic, key=count_dic.get, reverse=True):
         if count_dic.get(key):
             for thing in word_list:
@@ -36,7 +40,12 @@ def count_all(hotlist, word_list):
 def count_words(subreddit, word_list):
     global hotlist
     global after
-    """subs"""
+    """
+    Returns a list containing the titles of all
+    hot articles for a given subreddit.
+    """
+
+    # Set an User-Agent
     head = {'User-Agent': 'global smile'}
     if after:
         count = get('https://www.reddit.com/r/{}/hot.json?after={}'.format(
@@ -47,6 +56,8 @@ def count_words(subreddit, word_list):
     hotlist += [dic.get('data').get('title').lower()
                 for dic in count.get('children')]
     after = count.get('after')
+
+    # Set an User-Agent
     if after:
         return count_words(subreddit, word_list)
     return count_all(hotlist, word_list)
