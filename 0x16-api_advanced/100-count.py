@@ -50,7 +50,7 @@ def count_words(subreddit, word_list):
     """
 
     # Set an User-Agent
-    head = {'User-Agent': 'Python/requests'}
+    head = {'User-Agent': 'global smile'}
     if after:
         count = get('https://www.reddit.com/r/{}/hot.json?after={}'.format(
             subreddit, after), headers=head).json().get('data')
