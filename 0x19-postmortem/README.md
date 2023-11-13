@@ -1,5 +1,9 @@
 # Web stack debugging Postmortem
 
+
+![knowledge vs experience](https://github.com/globalsmile/alx-system_engineering-devops/assets/106287208/770ec724-009d-4e6e-9023-b6fe037412a5)
+
+
 ## Issue Summary
 
 - **Duration of the Outage:**
