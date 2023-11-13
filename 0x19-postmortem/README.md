@@ -1,10 +1,10 @@
-# Web Stack Outage Incident Postmortem
+# Web stack debugging Postmortem
 
 ## Issue Summary
 
 - **Duration of the Outage:**
-  - Start Time: October 15, 2023, 14:30 UTC
-  - End Time: October 15, 2023, 16:45 UTC
+  - Start Time: November 12, 2023, 14:30 UTC
+  - End Time: November 12, 2023, 16:45 UTC
 
 - **Impact:**
   - The outage affected the primary web application service.
@@ -17,7 +17,7 @@
 ## Timeline
 
 - **Detection Time:**
-  - October 15, 2023, 14:30 UTC
+  - November 12, 2023, 14:30 UTC
 
 - **Detection Method:**
   - Monitoring alerts triggered due to a sudden spike in error rates and response time.
